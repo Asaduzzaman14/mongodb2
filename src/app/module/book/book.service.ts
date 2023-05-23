@@ -1,3 +1,4 @@
+import { BookModel } from './book.interface';
 import Book from "./book.modal"
 
 export const getBooksFromDb = async (param) => {
@@ -37,6 +38,6 @@ export const updatePriceServices = async () => {
 
 export const getFeaturedService = async () => {
 
-    // const adminUser = await Book. 
+    // const adminUser = await Book.BookModel()
     // return adminUser
 }

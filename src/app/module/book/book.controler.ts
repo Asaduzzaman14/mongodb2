@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { getBooksFromDb, getFeaturedService, getTwoTypeBookFromDb, updatePriceServices } from "./user.service";
+import { getBooksFromDb, getFeaturedService, getTwoTypeBookFromDb, updatePriceServices } from "./book.service";
 
 
 

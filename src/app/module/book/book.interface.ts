@@ -27,7 +27,10 @@ export interface IBook {
 
 
 
+// Define the Book model interface with the static method
+
 
 export interface BookModel extends Model<IBook, {}> {
     getFeaturedBooks(): Promise<HydratedDocument<IBook>>;
 }
+

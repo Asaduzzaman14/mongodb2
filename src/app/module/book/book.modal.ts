@@ -1,9 +1,9 @@
 import { Schema, model } from "mongoose";
-import { IBook } from "./user.interface";
+import { IBook, BookModel } from "./book.interface";
 
 
 
-const bookSchema = new Schema<IBook>({
+const bookSchema = new Schema<IBook, BookModel>({
     id: {
         type: String,
         require: true,
@@ -57,7 +57,11 @@ const bookSchema = new Schema<IBook>({
         required: true
     },
 })
+// Define the static method implementation
 
+bookSchema.statics.getHighlyRatedBooks = function (callback: (error: any, books: IBook[]) => void) {
+    this.find({ rating: { $gte: 4 } }, callback);
+};
 
 
 bookSchema.static('getFeaturedBooks', async function getFeaturedBooks() {
@@ -85,6 +89,6 @@ bookSchema.static('getFeaturedBooks', async function getFeaturedBooks() {
 
 // carete modal using schema
 
-const Book = model<IBook>('Book', bookSchema);
+const Book = model<IBook, BookModel>('Book', bookSchema);
 
 export default Book;
