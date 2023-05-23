@@ -174,3 +174,44 @@ The purpose of the getBookInfo method is to retrieve and return a formatted stri
 
 
 #### Question 4: How do you use comparison operators like "$ne," "$gt," "$lt," "$gte," and "$lte" in MongoDB queries? Provide examples to illustrate their usage.
+
+In MongoDB, comparison operators are used to perform conditional queries to compare values in documents. The comparison operators we mentioned are commonly used in MongoDB queries.
+examples:
+
+$ne (Not Equal to): This operator matches values that are not equal to a specified value.
+```
+db.collection.find({ age: { $ne: 30 } })
+```
+$gt (Greater Than): This operator matches values that are greater than a specified value.
+
+```
+db.collection.find({ price: { $gt: 50 } })
+```
+
+$lt (Less Than): This operator matches values that are less than a specified value.
+
+```
+db.collection.find({ quantity: { $lt: 100 } })
+```
+
+$gte (Greater Than or Equal to): This operator matches values that are greater than or equal to a specified value.
+
+```
+db.collection.find({ rating: { $gte: 4.5 } })
+```
+
+$lte (Less Than or Equal to): This operator matches values that are less than or equal to a specified value
+```
+db.collection.find({ score: { $lte: 80 } })
+```
+
+
+
+### Question 5: What are MongoDB’s “$in” and “$nin” operators? How can you use them to match values against an array of values or exclude values from a given array?
+
+MongoDB's "$in" and "$nin" operators are used to match or exclude values against an array of values
+$in Operator: This operator matches documents where a specified field's value matches any value in a given array.
+
+$nin Operator: This operator matches documents where a specified field's value does not match any value in a given array.
+
+Both operators can be used with any field in the document and are not limited to just arrays. You can also use them with single values or combine them with other query operators for more complex conditions.
