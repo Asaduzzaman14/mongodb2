@@ -64,7 +64,8 @@ bookSchema.statics.getHighlyRatedBooks = function (callback: (error: any, books:
 };
 
 
-bookSchema.static('getFeaturedBooks', async function getFeaturedBooks() {
+bookSchema.static('getFeaturedBooks', async function
+    getFeaturedBooks() {
     this.aggregate([
         {
             $match: {

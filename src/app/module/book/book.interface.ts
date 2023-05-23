@@ -31,6 +31,6 @@ export interface IBook {
 
 
 export interface BookModel extends Model<IBook, {}> {
-    getFeaturedBooks(): Promise<HydratedDocument<IBook>>;
+    getFeaturedBooks();
 }
 

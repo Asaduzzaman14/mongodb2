@@ -15,7 +15,7 @@ export const getBooks = async (req: Request, res: Response) => {
         data: book
     })
 }
-
+// task 3
 export const getTwoTypeBooks = async (req: Request, res: Response) => {
     // const { genre, publisher } = req.query;
     // console.log(genre);
@@ -28,6 +28,7 @@ export const getTwoTypeBooks = async (req: Request, res: Response) => {
 }
 
 
+// task 4 
 export const updatePriceControler = async (req, res) => {
     await updatePriceServices()
     res.status(200).json({
@@ -38,7 +39,7 @@ export const updatePriceControler = async (req, res) => {
 
 
 
-
+// task 5 
 export const getFeatured = async (req: Request, res: Response, next: NextFunction) => {
 
     const featuredBook = await getFeaturedService()
